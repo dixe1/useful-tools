@@ -8,6 +8,8 @@ Prints text to the console character by character, with options to:
 If color is not provided, the text will be printed without color (using the terminal’s default)<br>
 If delays are not provided, both default to **20 ms**
 
+All functions are now part of the `consoleTools` namespace.
+
 ## Parameters
 
 | Parameter | Type   | Description                                                       |
@@ -47,9 +49,9 @@ write(text, color, delayBetweenChars, delayAfterSpace);
 #include "console_writer.h"
 
 int main() {
-    write("Hello world!", 32, 50, 100); // Prints green text with delays
-    write("No color text.", 0, 50, 100); // Prints text without color
-    write("default"); // Prints text with default settings (20ms delay and standard color)
+    consoleTools::write("Hello world!", 32, 50, 100); // Prints green text with delays
+    consoleTools::write("No color text.", 0, 50, 100); // Without color
+    consoleTools::write("default"); // Default settings
     return 0;
 }
 ```
