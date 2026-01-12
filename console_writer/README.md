@@ -6,7 +6,7 @@ Prints text to the console character by character, with options to:
 - Apply a color to the text (`color`)
 
 If color is not provided, the text will be printed without color (using the terminal’s default)<br>
-If delays are not provided, both default to **20 ms**
+If delays are not provided, both default to **40 ms**
 
 All functions are now part of the `consoleTools` namespace.
 
