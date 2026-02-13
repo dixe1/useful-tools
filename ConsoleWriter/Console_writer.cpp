@@ -2,7 +2,7 @@
 #include <string>
 #include <thread>
 #include <chrono>
-#include "console_writer.h"
+#include "Console_writer.h"
 
 /*
     text -> The text to print
