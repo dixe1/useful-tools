@@ -46,7 +46,7 @@ write(text, color, delayBetweenChars, delayAfterSpace);
 ```
 
 ```cpp
-#include "console_writer.h"
+#include "ConsoleWriter.h"
 
 int main() {
     consoleTools::write("Hello world!", 32, 50, 100); // Prints green text with delays
