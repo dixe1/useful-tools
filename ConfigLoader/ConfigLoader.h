@@ -3,7 +3,6 @@
 //
 
 #pragma once
-#include <iostream>
 #include <fstream>
 #include <string>
 #include <unordered_map>
@@ -24,8 +23,18 @@ public:
         std::string line;
         while (std::getline(file, line))
         {
-            size_t pos = line.find('=');
+            // Check if line is comment, if is then skip
+            // # comment
+            if (!line.empty() && line.at(0) == '#')
+                continue;
 
+            // Delete test after '#'
+            // value = key # comment
+            size_t commentPos = line.find('#');
+            if (commentPos != std::string::npos)
+                line.erase(commentPos, line.length());
+
+            size_t pos = line.find('=');
             if (pos == std::string::npos)
                 continue;
 
@@ -37,8 +46,6 @@ public:
 
             config[key] = value;
         }
-
-        file.close();
         return config;
     }
 
