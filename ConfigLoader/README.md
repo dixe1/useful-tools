@@ -10,6 +10,7 @@ The `ConfigLoader` class reads a file and returns an `std::unordered_map` of key
 ## Config format
 - key=value
 - key = value
+* Warning: Only leading and trailing spaces are removed. Multiple spaces inside key or value are kept.
 
 ## Usage
 ```cpp
