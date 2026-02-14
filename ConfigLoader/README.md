@@ -13,6 +13,16 @@ The `ConfigLoader` class reads a file and returns an `std::unordered_map` of key
 * Warning: Only leading and trailing spaces are removed. Multiple spaces inside key or value are kept.
 
 ## Usage
+
+### Example config
+```
+# sample comment
+
+width = 1024
+height = 2048 # sample comment
+admin = true
+```
+
 ```cpp
 #include "ConfigLoader.h"
 #include <iostream>
