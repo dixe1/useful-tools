@@ -9,6 +9,7 @@ The `ConfigLoader` class reads a file and returns an `std::unordered_map` of key
 
 ## Config format
 - key=value
+- key = value
 
 ## Usage
 ```cpp
